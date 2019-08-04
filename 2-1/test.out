@@ -1,0 +1,120 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x11be230 .scope module, "tb_rtl" "tb_rtl" 2 3;
+ .timescale -9 -11;
+P_0x11be328 .param/l "A" 2 10, +C4<01000>;
+P_0x11be350 .param/l "ADDER_0" 2 12, +C4<01001>;
+P_0x11be378 .param/l "B" 2 11, +C4<01000>;
+P_0x11be3a0 .param/l "MUL_0" 2 13, +C4<010000>;
+v0x11d2ba0_0 .net "a_out", 8 0, L_0x11d3350; 1 drivers
+v0x11d2c70_0 .net "adder_a", 7 0, v0x11a8eb0_0; 1 drivers
+v0x11d2d40_0 .net "adder_b", 7 0, v0x11d1800_0; 1 drivers
+v0x11d2e10_0 .var "i_clk", 0 0;
+v0x11d2e90_0 .net "i_resetn", 0 0, v0x11d1c10_0; 1 drivers
+v0x11d2f10_0 .net "m_out", 15 0, L_0x11d3640; 1 drivers
+v0x11d3020_0 .net "mul_a", 7 0, v0x11d19f0_0; 1 drivers
+v0x11d30f0_0 .net "mul_b", 7 0, v0x11d1a90_0; 1 drivers
+S_0x11d2440 .scope module, "adder_inst" "adder" 2 40, 3 2, S_0x11be230;
+ .timescale -9 -11;
+P_0x11d2538 .param/l "A" 3 3, +C4<01000>;
+P_0x11d2560 .param/l "ADDER_0" 3 5, +C4<01001>;
+P_0x11d2588 .param/l "B" 3 4, +C4<01000>;
+v0x11d2680_0 .net/s *"_s0", 8 0, L_0x11d3210; 1 drivers
+v0x11d2700_0 .net/s *"_s2", 8 0, L_0x11d32b0; 1 drivers
+v0x11d2780_0 .alias "adder_a", 7 0, v0x11d2c70_0;
+v0x11d2830_0 .alias "adder_b", 7 0, v0x11d2d40_0;
+v0x11d2910_0 .alias "adder_out", 8 0, v0x11d2ba0_0;
+v0x11d29c0_0 .net "i_clk", 0 0, v0x11d2e10_0; 1 drivers
+v0x11d2ad0_0 .alias "i_resetn", 0 0, v0x11d2e90_0;
+L_0x11d3210 .extend/s 9, v0x11a8eb0_0;
+L_0x11d32b0 .extend/s 9, v0x11d1800_0;
+L_0x11d3350 .arith/sum 9, L_0x11d3210, L_0x11d32b0;
+S_0x11d1d00 .scope module, "mul_inst" "mul" 2 52, 4 2, S_0x11be230;
+ .timescale -9 -11;
+P_0x11d1df8 .param/l "A" 4 3, +C4<01000>;
+P_0x11d1e20 .param/l "B" 4 4, +C4<01000>;
+P_0x11d1e48 .param/l "MUL_0" 4 5, +C4<010000>;
+v0x11d1f80_0 .net/s *"_s0", 15 0, L_0x11d3500; 1 drivers
+v0x11d2020_0 .net/s *"_s2", 15 0, L_0x11d35a0; 1 drivers
+v0x11d20c0_0 .alias "i_clk", 0 0, v0x11d29c0_0;
+v0x11d2140_0 .alias "i_resetn", 0 0, v0x11d2e90_0;
+v0x11d2220_0 .alias "mul_a", 7 0, v0x11d3020_0;
+v0x11d22d0_0 .alias "mul_b", 7 0, v0x11d30f0_0;
+v0x11d2390_0 .alias "mul_out", 15 0, v0x11d2f10_0;
+L_0x11d3500 .extend/s 16, v0x11d19f0_0;
+L_0x11d35a0 .extend/s 16, v0x11d1a90_0;
+L_0x11d3640 .arith/mult 16, L_0x11d3500, L_0x11d35a0;
+S_0x11be3d0 .scope module, "tester_ex2_inst" "tester_ex2" 2 63, 5 1, S_0x11be230;
+ .timescale -9 -11;
+P_0x1196e98 .param/l "A" 5 2, +C4<01000>;
+P_0x1196ec0 .param/l "ADDER_0" 5 4, +C4<01001>;
+P_0x1196ee8 .param/l "B" 5 3, +C4<01000>;
+P_0x1196f10 .param/l "MUL_0" 5 5, +C4<010000>;
+v0x11a8eb0_0 .var "adder_a", 7 0;
+v0x11d1800_0 .var "adder_b", 7 0;
+v0x11d18a0_0 .alias "adder_out", 8 0, v0x11d2ba0_0;
+v0x11d1940_0 .alias "i_clk", 0 0, v0x11d29c0_0;
+v0x11d19f0_0 .var "mul_a", 7 0;
+v0x11d1a90_0 .var "mul_b", 7 0;
+v0x11d1b70_0 .alias "mul_out", 15 0, v0x11d2f10_0;
+v0x11d1c10_0 .var "o_resetn", 0 0;
+    .scope S_0x11be3d0;
+T_0 ;
+    %delay 100, 0;
+    %delay 500, 0;
+    %set/v v0x11d1c10_0, 0, 1;
+    %delay 1000, 0;
+    %set/v v0x11d1c10_0, 1, 1;
+    %delay 500, 0;
+    %movi 8, 48, 8;
+    %set/v v0x11a8eb0_0, 8, 8;
+    %movi 8, 20, 8;
+    %set/v v0x11d1800_0, 8, 8;
+    %movi 8, 48, 8;
+    %set/v v0x11d19f0_0, 8, 8;
+    %movi 8, 20, 8;
+    %set/v v0x11d1a90_0, 8, 8;
+    %delay 500, 0;
+    %movi 8, 252, 8;
+    %set/v v0x11a8eb0_0, 8, 8;
+    %movi 8, 2, 8;
+    %set/v v0x11d1800_0, 8, 8;
+    %movi 8, 252, 8;
+    %set/v v0x11d19f0_0, 8, 8;
+    %movi 8, 2, 8;
+    %set/v v0x11d1a90_0, 8, 8;
+    %delay 10000, 0;
+    %vpi_call 5 45 "$finish";
+    %end;
+    .thread T_0;
+    .scope S_0x11be230;
+T_1 ;
+    %set/v v0x11d2e10_0, 0, 1;
+    %end;
+    .thread T_1;
+    .scope S_0x11be230;
+T_2 ;
+    %delay 250, 0;
+    %load/v 8, v0x11d2e10_0, 1;
+    %inv 8, 1;
+    %set/v v0x11d2e10_0, 8, 1;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x11be230;
+T_3 ;
+    %vpi_call 2 33 "$dumpfile", "test.vcd";
+    %vpi_call 2 34 "$dumpvars";
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "tb_rtl.v";
+    "adder.v";
+    "mul.v";
+    "tester_ex2.v";

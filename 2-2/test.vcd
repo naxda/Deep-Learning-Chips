@@ -1,0 +1,280 @@
+$date
+	Thu Aug  1 16:45:51 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module tb_rtl $end
+$var wire 1 ! i_resetn $end
+$var wire 18 " out [17:0] $end
+$var wire 24 # pe_mul_a [23:0] $end
+$var wire 24 $ pe_mul_b [23:0] $end
+$var reg 1 % i_clk $end
+$scope module pe_inst $end
+$var wire 17 & adder_out [16:0] $end
+$var wire 1 ' i_clk $end
+$var wire 1 ! i_resetn $end
+$var wire 18 ( out_tmp [17:0] $end
+$var wire 24 ) pe_mul_a [23:0] $end
+$var wire 24 * pe_mul_b [23:0] $end
+$var reg 18 + out [17:0] $end
+$scope module mul_0_inst $end
+$var wire 1 ' i_clk $end
+$var wire 1 ! i_resetn $end
+$var wire 8 , mul_a [7:0] $end
+$var wire 8 - mul_b [7:0] $end
+$var wire 16 . mul_out [15:0] $end
+$upscope $end
+$scope module mul_1_inst $end
+$var wire 1 ' i_clk $end
+$var wire 1 ! i_resetn $end
+$var wire 8 / mul_a [7:0] $end
+$var wire 8 0 mul_b [7:0] $end
+$var wire 16 1 mul_out [15:0] $end
+$upscope $end
+$scope module adder_0_inst $end
+$var wire 17 2 adder_out [16:0] $end
+$var wire 1 ' i_clk $end
+$var wire 1 ! i_resetn $end
+$var wire 16 3 mul_out_0 [15:0] $end
+$var wire 16 4 mul_out_1 [15:0] $end
+$upscope $end
+$scope module mul_2_inst $end
+$var wire 1 ' i_clk $end
+$var wire 1 ! i_resetn $end
+$var wire 8 5 mul_a [7:0] $end
+$var wire 8 6 mul_b [7:0] $end
+$var wire 16 7 mul_out [15:0] $end
+$upscope $end
+$scope module adder_1_inst $end
+$var wire 18 8 adder_out [17:0] $end
+$var wire 1 ' i_clk $end
+$var wire 1 ! i_resetn $end
+$var wire 17 9 mul_out_0 [16:0] $end
+$var wire 17 : mul_out_1 [16:0] $end
+$upscope $end
+$upscope $end
+$scope module tester_ex2_inst $end
+$var wire 1 ' i_clk $end
+$var reg 1 ; o_resetn $end
+$var reg 24 < pe_mul_a [23:0] $end
+$var reg 24 = pe_mul_b [23:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx =
+bx <
+x;
+bx :
+bx 9
+bx 8
+bx 7
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+0'
+bx &
+0%
+bx $
+bx #
+bx "
+x!
+$end
+#250
+1%
+1'
+#500
+0%
+0'
+#600
+b0 +
+b0 "
+0;
+0!
+#750
+1%
+1'
+#1000
+0%
+0'
+#1250
+1%
+1'
+#1500
+0%
+0'
+#1600
+1;
+1!
+#1750
+bx +
+bx "
+1%
+1'
+#2000
+0%
+0'
+#2100
+b1111110110000 (
+b1111110110000 8
+b110110000000 :
+b110110000000 7
+b1001000 6
+b1001000110000 &
+b1001000110000 2
+b1001000110000 9
+b10010110000 1
+b10010110000 4
+b111100 0
+b110110000000 .
+b110110000000 3
+b1001000 -
+b110000 5
+b10100 /
+b110000 ,
+b10010000011110001001000 =
+b10010000011110001001000 $
+b10010000011110001001000 *
+b1100000001010000110000 <
+b1100000001010000110000 #
+b1100000001010000110000 )
+#2250
+b1111110110000 +
+b1111110110000 "
+1%
+1'
+#2500
+0%
+0'
+#2750
+1%
+1'
+#3000
+0%
+0'
+#3250
+1%
+1'
+#3500
+0%
+0'
+#3750
+1%
+1'
+#4000
+0%
+0'
+#4250
+1%
+1'
+#4500
+0%
+0'
+#4750
+1%
+1'
+#5000
+0%
+0'
+#5250
+1%
+1'
+#5500
+0%
+0'
+#5750
+1%
+1'
+#6000
+0%
+0'
+#6250
+1%
+1'
+#6500
+0%
+0'
+#6750
+1%
+1'
+#7000
+0%
+0'
+#7250
+1%
+1'
+#7500
+0%
+0'
+#7750
+1%
+1'
+#8000
+0%
+0'
+#8250
+1%
+1'
+#8500
+0%
+0'
+#8750
+1%
+1'
+#9000
+0%
+0'
+#9250
+1%
+1'
+#9500
+0%
+0'
+#9750
+1%
+1'
+#10000
+0%
+0'
+#10250
+1%
+1'
+#10500
+0%
+0'
+#10750
+1%
+1'
+#11000
+0%
+0'
+#11250
+1%
+1'
+#11500
+0%
+0'
+#11750
+1%
+1'
+#12000
+0%
+0'
+#12100
